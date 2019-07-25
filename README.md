@@ -28,7 +28,7 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     Navigate into your new site’s directory and start it up.
 
     ```sh
-    cd my-default-starter/
+    cd CodeJam-Culture-Portal/
     gatsby develop
     ```
 
