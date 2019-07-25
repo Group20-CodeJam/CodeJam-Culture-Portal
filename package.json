@@ -5,6 +5,8 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@material-ui/core": "^4.2.1",
+    "@material-ui/icons": "^4.2.1",
     "gatsby": "^2.13.39",
     "gatsby-image": "^2.2.6",
     "gatsby-plugin-manifest": "^2.2.4",
@@ -17,7 +19,8 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-tap-event-plugin": "^3.0.3"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
@@ -33,7 +36,7 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "lint" : "eslint src/",
+    "lint": "eslint src/",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
