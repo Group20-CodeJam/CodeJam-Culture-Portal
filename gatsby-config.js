@@ -1,3 +1,7 @@
+if (process.env.NODE_ENV === 'development') {
+  // eslint-disable-next-line global-require
+  require('dotenv').config();
+}
 module.exports = {
   siteMetadata: {
     title: 'Group-20',
@@ -9,9 +13,9 @@ module.exports = {
     {
       resolve: 'gatsby-source-contentful',
       options: {
-        spaceId: '7f7u5dflh6fh',
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
         // Learn about environment variables: https://gatsby.dev/env-vars
-        accessToken: 'N9rPyosckZ_RKo8kSIxxDYFC3ALIhs6NNu5KDlbMlzs',
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
       },
     },
     {
