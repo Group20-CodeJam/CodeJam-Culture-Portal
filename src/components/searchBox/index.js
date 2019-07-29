@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Button from '@material-ui/core/Button';
-import Input from '@material-ui/core/Input';
+import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/styles';
 
 import styles from './styles';
@@ -11,11 +11,15 @@ import styles from './styles';
 const SearchBox = (props) => {
   const { classes } = props;
   return (
-    <div>
-      <Input>
-      Search
-      </Input>
-      <Button className={classes.button}>
+    <div className={classes.searchBox}>
+      <TextField
+        className={classes.textField}
+        variant="outlined"
+        placeholder="Search"
+      />
+      <Button
+        className={classes.button}
+      >
         Search
       </Button>
     </div>
