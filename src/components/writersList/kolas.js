@@ -10,8 +10,8 @@ const Kolas = (props) => {
 
   return (
     <Card className={classes.card} container>
-      <img src={KolasForList} alt="Kolas" />
-      <p>kolas</p>
+      <img className={classes.photo} src={KolasForList} alt="Kolas" />
+      <h2 className={classes.name}>Якуб Колас</h2>
     </Card>
   );
 };

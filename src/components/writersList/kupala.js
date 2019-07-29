@@ -10,8 +10,8 @@ const Kupala = (props) => {
 
   return (
     <Card className={classes.card} container>
-      <img src={KupalaForList} alt="Kupala" />
-      <p>kupala</p>
+      <img className={classes.photo} src={KupalaForList} alt="Kupala" />
+      <h2 className={classes.name}>Янка Купала</h2>
     </Card>
   );
 };

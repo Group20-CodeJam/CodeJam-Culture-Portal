@@ -10,8 +10,8 @@ const Bykav = (props) => {
 
   return (
     <Card className={classes.card} container>
-      <img src={BykavForList} alt="Bykav" />
-      <p>bykav</p>
+      <img className={classes.photo} src={BykavForList} alt="Bykav" />
+      <h2 className={classes.name}>Василь Быков</h2>
     </Card>
   );
 };

@@ -14,28 +14,26 @@ const WritersList = (props) => {
   const { classes } = props;
 
   return (
-    <div>
-      <Grid container spacing={2}>
-        <Grid item xs={4}>
-          <Kupala />
-        </Grid>
-        <Grid item xs={4}>
-          <Kolas />
-        </Grid>
-        <Grid item xs={4}>
-          <Bykav />
-        </Grid>
-        <Grid item xs={4}>
-          <Baradulin />
-        </Grid>
-        <Grid item xs={4}>
-          <Tank />
-        </Grid>
-        <Grid item xs={4}>
-          <Krapiva />
-        </Grid>
+    <Grid className={classes.writersList} container justify="center" spacing={2}>
+      <Grid item sm={4}>
+        <Kupala />
       </Grid>
-    </div>
+      <Grid item sm={4}>
+        <Kolas />
+      </Grid>
+      <Grid item sm={4}>
+        <Bykav />
+      </Grid>
+      <Grid item sm={4}>
+        <Baradulin />
+      </Grid>
+      <Grid item sm={4}>
+        <Tank />
+      </Grid>
+      <Grid item sm={4}>
+        <Krapiva />
+      </Grid>
+    </Grid>
   );
 };
 

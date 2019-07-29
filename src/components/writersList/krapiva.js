@@ -10,8 +10,8 @@ const Krapiva = (props) => {
 
   return (
     <Card className={classes.card} container>
-      <img src={KrapivaForList} alt="Krapiva" />
-      <p>krapiva</p>
+      <img className={classes.photo} src={KrapivaForList} alt="Krapiva" />
+      <h2 className={classes.name}>Кондрат Крапива</h2>
     </Card>
   );
 };

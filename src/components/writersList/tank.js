@@ -10,8 +10,8 @@ const Tank = (props) => {
 
   return (
     <Card className={classes.card} container>
-      <img src={TankForList} alt="Tank" />
-      <p>tank</p>
+      <img className={classes.photo} src={TankForList} alt="Tank" />
+      <h2 className={classes.name}>Максим Танк</h2>
     </Card>
   );
 };

@@ -10,8 +10,8 @@ const Baradulin = (props) => {
 
   return (
     <Card className={classes.card} container>
-      <img src={BaradulinForList} alt="Baradulin" />
-      <p>baradulin</p>
+      <img className={classes.photo} src={BaradulinForList} alt="Baradulin" />
+      <h2 className={classes.name}>Рыгор Бородулин</h2>
     </Card>
   );
 };
