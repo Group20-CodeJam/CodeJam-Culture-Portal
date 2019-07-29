@@ -12,6 +12,11 @@ const Kupala = (props) => {
     <Card className={classes.card} container>
       <img className={classes.photo} src={KupalaForList} alt="Kupala" />
       <h2 className={classes.name}>Янка Купала</h2>
+      <p className={classes.place}>
+        Место рождения:
+        <br />
+        деревня Вязынка
+      </p>
     </Card>
   );
 };

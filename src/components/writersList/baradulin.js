@@ -12,6 +12,11 @@ const Baradulin = (props) => {
     <Card className={classes.card} container>
       <img className={classes.photo} src={BaradulinForList} alt="Baradulin" />
       <h2 className={classes.name}>Рыгор Бородулин</h2>
+      <p className={classes.place}>
+        Место рождения:
+        <br />
+        хутор Вересовка
+      </p>
     </Card>
   );
 };

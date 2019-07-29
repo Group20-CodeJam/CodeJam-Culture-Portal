@@ -12,6 +12,11 @@ const Tank = (props) => {
     <Card className={classes.card} container>
       <img className={classes.photo} src={TankForList} alt="Tank" />
       <h2 className={classes.name}>Максим Танк</h2>
+      <p className={classes.place}>
+        Место рождения:
+        <br />
+        деревня Пильковщина
+      </p>
     </Card>
   );
 };

@@ -12,6 +12,11 @@ const Bykav = (props) => {
     <Card className={classes.card} container>
       <img className={classes.photo} src={BykavForList} alt="Bykav" />
       <h2 className={classes.name}>Василь Быков</h2>
+      <p className={classes.place}>
+        Место рождения:
+        <br />
+        деревня Бычки
+      </p>
     </Card>
   );
 };

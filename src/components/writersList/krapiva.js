@@ -12,6 +12,11 @@ const Krapiva = (props) => {
     <Card className={classes.card} container>
       <img className={classes.photo} src={KrapivaForList} alt="Krapiva" />
       <h2 className={classes.name}>Кондрат Крапива</h2>
+      <p className={classes.place}>
+        Место рождения:
+        <br />
+        деревня Низок
+      </p>
     </Card>
   );
 };
