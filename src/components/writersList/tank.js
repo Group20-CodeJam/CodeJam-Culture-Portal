@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/styles';
 import { Card } from '@material-ui/core';
 import styles from './styles';
+import TankForList from '../../images/TankForList.jpg';
 
 const Tank = (props) => {
   const { classes } = props;
 
   return (
     <Card className={classes.card} container>
+      <img src={TankForList} alt="Tank" />
       <p>tank</p>
     </Card>
   );
