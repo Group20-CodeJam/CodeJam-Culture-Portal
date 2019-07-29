@@ -10,15 +10,37 @@ import styles from './styles';
 
 const SearchBox = (props) => {
   const { classes } = props;
+  const { search } = props;
+
+  let state = '';
+
+  const handleClick = () => {
+    search(state);
+  };
+
+  const handleKeyPress = (event) => {
+    if (event.key === 'Enter') {
+      handleClick();
+    }
+  };
+
+  const handleChange = (event) => {
+    state = event.target.value;
+  };
+
+
   return (
     <div className={classes.searchBox}>
       <TextField
         className={classes.textField}
         variant="outlined"
         placeholder="Search"
+        onKeyPress={handleKeyPress}
+        onChange={handleChange}
       />
       <Button
         className={classes.button}
+        onClick={handleClick}
       >
         Search
       </Button>
@@ -27,7 +49,8 @@ const SearchBox = (props) => {
 };
 
 SearchBox.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  classes: PropTypes.string.isRequired,
+  search: PropTypes.func.isRequired,
 };
 
 export default withStyles(styles)(SearchBox);
