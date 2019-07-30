@@ -9,7 +9,7 @@ import Layout from '../components/layout';
 
 const Writer = ({ data }) => {
   const {
-    authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery,
+    authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery, video,
   } = data.contentfulWriter;
 
   const timelineContent = [];
@@ -50,8 +50,7 @@ const Writer = ({ data }) => {
         </p>
         <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
         <Carousel views={GalleryContent} />
-
-        <Video />
+        <Video videoId={video} />
 
         <Link to="/writer">View more posts</Link>
         <Link to="/">Back to Home</Link>
@@ -86,6 +85,7 @@ export const pageQuery = graphql`
             url
           }
       }
+      video
     }
   }
 `;

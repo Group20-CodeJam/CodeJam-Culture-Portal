@@ -18,7 +18,7 @@ export default class Video extends React.Component {
   render() {
     return (
       <div>
-        <ModalVideo channel="youtube" isOpen={this.state.isOpen} videoId="9FZehV2qJTk" onClose={() => this.setState({ isOpen: false })} />
+        <ModalVideo channel="youtube" isOpen={this.state.isOpen} videoId={this.props.videoId} onClose={() => this.setState({ isOpen: false })} />
         <button type="button" onClick={this.openModal}>Watch video</button>
       </div>
     );
