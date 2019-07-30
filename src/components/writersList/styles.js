@@ -1,7 +1,4 @@
 export default {
-  writersList: {
-    margin: '0 auto',
-  },
   name: {
     textAlign: 'center',
     fontWeight: '400',
