@@ -7,7 +7,9 @@
   "dependencies": {
     "@material-ui/core": "^4.2.1",
     "@material-ui/icons": "^4.2.1",
+    "@react-google-maps/api": "^1.5.1",
     "dotenv": "^8.0.0",
+    "eslint-config-airbnb-base": "^13.2.0",
     "gatsby": "^2.13.39",
     "gatsby-cli": "^2.7.20",
     "gatsby-image": "^2.2.6",
@@ -22,7 +24,13 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-tap-event-plugin": "^3.0.3"
+    "react-image-gallery": "^0.8.18",
+    "react-images": "^1.0.0",
+    "react-markdown": "^4.1.0",
+    "react-modal-video": "^1.2.2",
+    "react-tap-event-plugin": "^3.0.3",
+    "react-youtube": "^7.9.0",
+    "vertical-timeline-component-for-react": "^1.0.6"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
