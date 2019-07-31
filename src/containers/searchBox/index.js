@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
 import Button from '@material-ui/core/Button';
@@ -7,58 +7,43 @@ import { withStyles } from '@material-ui/styles';
 
 import styles from './styles';
 
-class SearchBox extends Component {
-  constructor() {
-    super();
-    this.state = {
-      query: '',
-    };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleKeyPress = this.handleKeyPress.bind(this);
-  }
+const ENTER_KEY = 'Enter';
 
-  handleChange(event) {
-    const newState = {
-      query: event.target.value,
-    };
-    this.setState(newState);
-  }
+const SearchBox = ({ search, classes: { searchBox, textField, button } }) => {
+  const [query, setQuery] = useState('');
 
-  handleClick() {
-    const { search } = this.props;
-    const { query } = this.state;
-    search(query);
-  }
+  const handleChange = useCallback(
+    ({ target: { value } }) => setQuery(value),
+  );
 
-  handleKeyPress(event) {
-    if (event.key === 'Enter') {
-      this.handleClick();
-    }
-  }
+  const handleClick = useCallback(
+    () => search(query),
+    [query],
+  );
 
-  render() {
-    const { classes } = this.props;
-    return (
-      <div className={classes.searchBox}>
-        <TextField
-          className={classes.textField}
-          variant="outlined"
-          placeholder="Search"
-          onKeyPress={this.handleKeyPress}
-          onChange={this.handleChange}
-        />
-        <Button
-          className={classes.button}
-          onClick={this.handleClick}
-        >
-            Search
-        </Button>
-      </div>
-    );
-  }
-}
+  const handleKeyPress = useCallback(
+    ({ key }) => (key === ENTER_KEY ? handleClick() : undefined),
+    [handleClick],
+  );
 
+  return (
+    <div className={searchBox}>
+      <TextField
+        className={textField}
+        variant="outlined"
+        placeholder="Search"
+        onKeyPress={handleKeyPress}
+        onChange={handleChange}
+      />
+      <Button
+        className={button}
+        onClick={handleClick}
+      >
+        Search
+      </Button>
+    </div>
+  );
+};
 SearchBox.propTypes = {
   classes: PropTypes.string.isRequired,
   search: PropTypes.func.isRequired,
