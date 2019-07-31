@@ -1,7 +1,40 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require('path');
+const slash = require('slash');
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions;
+  return graphql(
+    `
+      {
+        allContentfulWriter {
+          edges {
+            node {
+              id
+            }
+          }
+        }
+      }
+    `,
+  ).then((result) => {
+    if (result.errors) {
+      window.console.log('Error retrieving contentful data', result.errors);
+    }
+
+    // Resolve the paths to our template
+    const writerTemplate = path.resolve('./src/templates/writer.js');
+
+    // Then for each result we create a page.
+    result.data.allContentfulWriter.edges.forEach((edge) => {
+      createPage({
+        path: `/writer/${edge.node.id}/`,
+        component: slash(writerTemplate),
+        context: {
+          id: edge.node.id,
+        },
+      });
+    });
+  })
+    .catch((error) => {
+      window.console.log('Error retrieving contentful data', error);
+    });
+};
