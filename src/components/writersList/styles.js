@@ -21,4 +21,16 @@ export default {
     fontFamily: 'sans-serif',
     marginBottom: '0px',
   },
+  link: {
+    backgroundColor: '#744b67',
+    color: '#eeedff',
+    textDecoration: 'none',
+    fontFamily: 'sans-serif',
+    display: 'block',
+    lineHeight: '1.8rem',
+    width: '280px',
+    margin: '0 auto',
+    textAlign: 'center',
+    borderRadius: '15px',
+  },
 };
