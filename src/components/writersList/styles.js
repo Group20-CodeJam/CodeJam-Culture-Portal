@@ -19,5 +19,6 @@ export default {
   place: {
     textAlign: 'center',
     fontFamily: 'sans-serif',
+    marginBottom: '0px',
   },
 };
