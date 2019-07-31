@@ -7,7 +7,6 @@ import ReactMarkdown from 'react-markdown';
 import Video from '../components/video';
 import Layout from '../components/layout';
 
-
 const Writer = ({ data }) => {
   const {
     authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery, video,
@@ -53,7 +52,7 @@ const Writer = ({ data }) => {
         <Carousel views={GalleryContent} />
         <Video videoId={video} />
 
-        <Link to="/writer">View more posts</Link>
+        <Link to="/writers/">View more writers</Link>
         <Link to="/">Back to Home</Link>
       </div>
 
@@ -64,9 +63,10 @@ const Writer = ({ data }) => {
 export default Writer;
 
 export const pageQuery = graphql`
-  query($id: String!) {
-    contentfulWriter(id: { eq: $id }) {
+  query($slug: String!) {
+    contentfulWriter(slug: { eq: $slug }) {
         id
+        slug
         authorsName
         yearsOfLife
         biography {

@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 import { withStyles } from '@material-ui/styles';
 import { Card } from '@material-ui/core';
 import styles from './styles';
 
 const CardWriter = ({
   info, classes: {
-    card, photo, name, place,
+    card, photo, name, place, link,
   },
 }) => (
   <Card className={card} container>
@@ -17,6 +18,7 @@ const CardWriter = ({
       <br />
       {info.place}
     </p>
+    <Link className={link} to={'/writer/' + info.link +'/'}>Перейти на страницу писателя</Link>
   </Card>
 );
 

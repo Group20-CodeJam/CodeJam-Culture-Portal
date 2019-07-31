@@ -10,6 +10,7 @@ exports.createPages = ({ graphql, actions }) => {
           edges {
             node {
               id
+              slug
             }
           }
         }
@@ -26,9 +27,10 @@ exports.createPages = ({ graphql, actions }) => {
     // Then for each result we create a page.
     result.data.allContentfulWriter.edges.forEach((edge) => {
       createPage({
-        path: `/writer/${edge.node.id}/`,
+        path: `writer/${edge.node.slug}/`,
         component: slash(writerTemplate),
         context: {
+          slug: edge.node.slug,
           id: edge.node.id,
         },
       });

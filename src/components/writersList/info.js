@@ -10,30 +10,36 @@ export default [
     name: 'Якуб Колас',
     photo: KolasForList,
     place: 'деревня Акинчицы',
+    link: 'kolas',
   },
   {
     name: 'Кондрат Крапива',
     photo: KrapivaForList,
     place: 'деревня Низок',
+    link: 'krapiva',
   },
   {
     name: 'Янка Купала',
     photo: KupalaForList,
     place: 'деревня Вязынка',
+    link: 'kupala',
   },
   {
     name: 'Максим Танк',
     photo: TankForList,
     place: 'деревня Пильковщина',
+    link: 'tank',
   },
   {
     name: 'Василь Быков',
     photo: BykavForList,
     place: 'деревня Бычки',
+    link: 'bykov',
   },
   {
     name: 'Рыгор Бородулин',
     photo: BaradulinForList,
     place: 'хутор Вересовка',
+    link: 'borodulin',
   },
 ];
