@@ -1,15 +1,11 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
 
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import { withStyles } from '@material-ui/styles';
-
-import styles from './styles';
+import SearchElement from '../../components/searchElement';
 
 const ENTER_KEY = 'Enter';
 
-const SearchBox = ({ search, classes: { searchBox, textField, button } }) => {
+const SearchBox = ({ search }) => {
   const [query, setQuery] = useState('');
 
   const handleChange = useCallback(
@@ -27,26 +23,15 @@ const SearchBox = ({ search, classes: { searchBox, textField, button } }) => {
   );
 
   return (
-    <div className={searchBox}>
-      <TextField
-        className={textField}
-        variant="outlined"
-        placeholder="Search"
-        onKeyPress={handleKeyPress}
-        onChange={handleChange}
-      />
-      <Button
-        className={button}
-        onClick={handleClick}
-      >
-        Search
-      </Button>
-    </div>
+    <SearchElement
+      handleChange={handleChange}
+      handleClick={handleClick}
+      handleKeyPress={handleKeyPress}
+    />
   );
 };
 SearchBox.propTypes = {
-  classes: PropTypes.string.isRequired,
   search: PropTypes.func.isRequired,
 };
 
-export default withStyles(styles)(SearchBox);
+export default SearchBox;
