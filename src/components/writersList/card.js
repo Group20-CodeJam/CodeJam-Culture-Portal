@@ -18,7 +18,7 @@ const CardWriter = ({
       <br />
       {info.place}
     </p>
-    <Link className={link} to='/writer/./'>Перейти на страницу писателя</Link>
+    <Link className={link} to={'/writer/' + info.link +'/'}>Перейти на страницу писателя</Link>
   </Card>
 );
 
