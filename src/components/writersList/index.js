@@ -9,19 +9,16 @@ import styles from './styles';
 import Card from './card';
 import info from './info';
 
-const WritersList = (props) => {
-  const { classes: { writersList } } = props;
+const WritersList = ({ classes: { writersList } }) => (
+  <Grid className={writersList} container justify="center" spacing={2}>
+    {Array.from({ length: 6 }, () => null).map((field, i) => (
+      <Grid item sm={4} key={i.toString() + 1}>
+        <Card info={info[i]} />
+      </Grid>
+    ))}
+  </Grid>
+);
 
-  return (
-    <Grid className={writersList} container justify="center" spacing={2}>
-      {Array.from({ length: 6 }, () => null).map((field, i) => (
-        <Grid item sm={4} key={i.toString() + 1}>
-          <Card info={info[i]} />
-        </Grid>
-      ))}
-    </Grid>
-  );
-};
 
 WritersList.propTypes = {
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
