@@ -17,7 +17,7 @@ exports.createPages = ({ graphql, actions }) => {
     `,
   ).then((result) => {
     if (result.errors) {
-      console.log('Error retrieving contentful data', result.errors);
+      window.console.log('Error retrieving contentful data', result.errors);
     }
 
     // Resolve the paths to our template
@@ -35,6 +35,6 @@ exports.createPages = ({ graphql, actions }) => {
     });
   })
     .catch((error) => {
-      console.log('Error retrieving contentful data', error);
+      window.console.log('Error retrieving contentful data', error);
     });
 };

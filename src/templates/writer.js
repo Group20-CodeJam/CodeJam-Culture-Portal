@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
