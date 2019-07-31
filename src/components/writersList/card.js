@@ -5,13 +5,21 @@ import { Card } from '@material-ui/core';
 import styles from './styles';
 
 const CardWriter = (props) => {
-  const { info, classes } = props;
+  const {
+    info,
+    classes: {
+      card,
+      photo,
+      name,
+      place,
+    },
+  } = props;
 
   return (
-    <Card className={classes.card} container>
-      <img className={classes.photo} src={info.photo} alt={info.name} />
-      <h2 className={classes.name}>{info.name}</h2>
-      <p className={classes.place}>
+    <Card className={card} container>
+      <img className={photo} src={info.photo} alt={info.name} />
+      <h2 className={name}>{info.name}</h2>
+      <p className={place}>
         Место рождения:
         <br />
         {info.place}

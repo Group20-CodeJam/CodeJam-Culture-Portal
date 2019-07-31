@@ -10,10 +10,10 @@ import Card from './card';
 import info from './info';
 
 const WritersList = (props) => {
-  const { classes } = props;
+  const { classes: { writersList } } = props;
 
   return (
-    <Grid className={classes.writersList} container justify="center" spacing={2}>
+    <Grid className={writersList} container justify="center" spacing={2}>
       {Array.from({ length: 6 }, () => null).map((field, i) => (
         <Grid item sm={4} key={i.toString() + 1}>
           <Card info={info[i]} />
