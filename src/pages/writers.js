@@ -3,11 +3,10 @@ import React from 'react';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import WritersList from '../components/writersList';
-import SearchBox from '../components/searchBox';
+import SearchBox from '../containers/searchBox';
 
-function func(state) {
-  console.log(state);
-}
+const func = state => console.log(state);
+
 
 const SecondPage = () => (
   <Layout>
