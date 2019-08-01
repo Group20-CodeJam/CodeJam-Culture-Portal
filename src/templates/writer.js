@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import Carousel from 'react-images';
 import ReactMarkdown from 'react-markdown';
-import Video from '../components/video';
+import VideoContanier from '../containers/videoContainer';
 import Layout from '../components/layout';
 
 const Writer = ({ data }) => {
@@ -50,7 +50,7 @@ const Writer = ({ data }) => {
         </p>
         <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
         <Carousel views={GalleryContent} />
-        <Video videoId={video} />
+        <VideoContanier videoId={video} />
 
         <Link to="/writers/">View more writers</Link>
         <Link to="/">Back to Home</Link>
