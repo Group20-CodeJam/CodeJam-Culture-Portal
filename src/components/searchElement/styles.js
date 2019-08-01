@@ -7,8 +7,8 @@ export default {
     marginBottom: '1rem',
   },
   textField: {
-    width: '60%',
-    fontSize: '10px',
+    width: '80%',
+    borderRadius: '100px',
     '& .MuiOutlinedInput-root': {
       '& fieldset': {
         borderColor: '#eeedff',
@@ -22,10 +22,16 @@ export default {
     },
   },
   button: {
-    background: '#744b67',
-    color: '#eeedff',
+    color: '#744b67',
+    borderColor: '#744b67',
     textTransform: 'capitalize',
+    textWeight: 'bold',
     fontSize: '1rem',
-    borderRadius: '10px',
+    borderRadius: '5px',
+    borderWidth: '2px',
+    '&:hover': {
+      background: '#744b67',
+      color: '#eeedff',
+    },
   },
 };
