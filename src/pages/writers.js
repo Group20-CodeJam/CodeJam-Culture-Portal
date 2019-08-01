@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import WritersList from '../components/writersList';
+import WritersList from '../containers/writersList';
 import SearchBox from '../containers/searchBox';
 
 

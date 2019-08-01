@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/styles';
 import { Grid } from '@material-ui/core';
-import styles from './styles';
-import Card from './card';
+import Card from '../../components/card';
 import info from './info';
 
 const NOT_FOUND_KEY = -1;
 const SM = 4;
 const SPACING = 2;
 
-const WritersList = ({ classes: { writersList }, query }) => (
-  <Grid className={writersList} container justify="center" spacing={SPACING}>
+const WritersList = ({ query }) => (
+  <Grid container justify="center" spacing={SPACING}>
     {
       info
         .filter((value) => {
@@ -28,8 +26,7 @@ const WritersList = ({ classes: { writersList }, query }) => (
 );
 
 WritersList.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
   query: PropTypes.string.isRequired,
 };
 
-export default withStyles(styles)(WritersList);
+export default WritersList;
