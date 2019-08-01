@@ -3,7 +3,7 @@ export default {
     textAlign: 'center',
     fontWeight: '400',
     fontSize: '1.3rem',
-    marginTop: '10px',
+    marginTop: '5px',
   },
   photo: {
     height: '300px',
@@ -13,8 +13,8 @@ export default {
   },
   card: {
     height: '450px',
-    background: 'linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(116,75,103,1) 100%)',
     borderRadius: '10px',
+    background: '#744b6736',
   },
   place: {
     textAlign: 'center',
@@ -22,8 +22,7 @@ export default {
     marginBottom: '0px',
   },
   link: {
-    backgroundColor: '#744b67',
-    color: '#eeedff',
+    color: '#744b67',
     textDecoration: 'none',
     fontFamily: 'sans-serif',
     display: 'block',
@@ -31,6 +30,12 @@ export default {
     width: '280px',
     margin: '0 auto',
     textAlign: 'center',
-    borderRadius: '15px',
+    border: '2px solid #744b67',
+    borderRadius: '5px',
+    '&:hover': {
+      background: '#744b67',
+      color: '#eeedff',
+    },
   },
+
 };
