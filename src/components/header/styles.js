@@ -5,18 +5,18 @@ export default {
     width: '100%',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     '& img': {
       width: '8%',
       height: '90%',
-      marginLeft: '10px',
       marginTop: '5px',
     },
   },
   nav: {
+    width: '60%',
     display: 'flex',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
   },
   link: {
     color: '#eeedff',
