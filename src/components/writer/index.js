@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
-import Carousel from 'react-images';
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'gatsby';
+import SlideShow from 'react-image-show';
 import Video from '../video';
 import Layout from '../layout';
-
 
 const WriterComponent = ({
   authorsName, yearsOfLife, image, timelineContent, GalleryContent, listOfWorks, video,
@@ -35,7 +34,6 @@ const WriterComponent = ({
         </Timeline>
       </p>
       <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
-      <Carousel views={GalleryContent} />
       <Video videoId={video} />
 
       <Link to="/writers/">View more writers</Link>
