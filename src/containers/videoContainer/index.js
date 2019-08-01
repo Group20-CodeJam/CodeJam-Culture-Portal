@@ -1,5 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
+import Button from '@material-ui/core/Button';
 
 import Video from '../../components/video';
 
@@ -20,7 +21,12 @@ const VideoContainer = ({ videoId }) => {
     [isOpen],
   );
 
-  return <Video videoId={videoId} openModal={openModal} onClose={closeModal} isOpen={isOpen} />;
+  return (
+    <div>
+      <Video videoId={videoId} openModal={openModal} onClose={closeModal} isOpen={isOpen} />
+      <Button onClick={openModal}>Open</Button>
+    </div>
+  );
 };
 
 VideoContainer.propTypes = {

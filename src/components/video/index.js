@@ -1,21 +1,24 @@
 import React from 'react';
-import ModalVideo from 'react-modal-video';
 import PropTypes from 'prop-types';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
 
 
-const Video = ({
-  onClose, openModal, videoId, isOpen,
-}) => (
-  <div>
-    <ModalVideo channel="youtube" isOpen={isOpen} videoId={videoId} onClose={onClose} />
-    <button type="button" onClick={openModal}>Watch video</button>
-  </div>
+import 'video-react/dist/video-react.css';
+
+const Video = ({ videoId, onClose, isOpen }) => (
+  <Dialog
+    open={isOpen}
+    onClose={onClose}
+  >
+    <iframe title="frame" src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" />
+    <Button onClick={onClose}>Close</Button>
+  </Dialog>
 );
+
 Video.propTypes = {
-  openModal: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired,
   videoId: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
 };
-
 export default Video;
