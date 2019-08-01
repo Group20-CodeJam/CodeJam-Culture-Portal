@@ -22,6 +22,7 @@ const SearchElement = ({
     <Button
       className={button}
       onClick={handleClick}
+      variant="outlined"
     >
         Search
     </Button>
