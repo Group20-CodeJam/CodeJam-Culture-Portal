@@ -30,6 +30,7 @@
     "react-markdown": "^4.1.0",
     "react-modal-video": "^1.2.2",
     "react-scrolllock": "^1.0.9",
+    "react-select": "^3.0.4",
     "react-tap-event-plugin": "^3.0.3",
     "react-youtube": "^7.9.0",
     "slash": "^3.0.0",

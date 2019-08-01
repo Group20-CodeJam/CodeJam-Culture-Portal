@@ -18,6 +18,7 @@ const Writer = ({ data }) => {
       photoGallery={photoGallery}
       video={video}
     />
+
   );
 };
 

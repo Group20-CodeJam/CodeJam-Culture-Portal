@@ -5,22 +5,20 @@ import { withStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography';
 import styles from './styles';
 
-const NavTabs = (props) => {
-  const { classes } = props;
-
-  return (
-    <nav className={classes.nav}>
-      <Typography>
-        <Link to="/" className={classes.link}>
+const NavTabs = ({
+  classes: { nav, link },
+}) => (
+  <nav className={nav}>
+    <Typography>
+      <Link to="/" className={link}>
           Main
-        </Link>
-        <Link to="/writers/" className={classes.link}>
+      </Link>
+      <Link to="/writers/" className={link}>
           Writers
-        </Link>
-      </Typography>
-    </nav>
-  );
-};
+      </Link>
+    </Typography>
+  </nav>
+);
 
 NavTabs.propTypes = {
   classes: PropTypes.objectOf(PropTypes.object).isRequired,

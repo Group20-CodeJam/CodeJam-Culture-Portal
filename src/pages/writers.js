@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import WritersList from '../components/writersList';
+import WritersList from '../containers/writersList';
 import SearchBox from '../containers/searchBox';
 
-const func = state => console.log(state);
 
+const SecondPage = () => {
+  const [searchQuery, setSearchQuery] = useState('');
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Page two" />
-    <SearchBox search={func} />
-    <WritersList />
-  </Layout>
-);
+  return (
+    <Layout>
+      <SEO title="Page two" />
+      <SearchBox search={setSearchQuery} />
+      <WritersList query={searchQuery} />
+    </Layout>
+  );
+};
 
 export default SecondPage;
