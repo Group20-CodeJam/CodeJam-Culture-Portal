@@ -6,33 +6,26 @@ import styles from './styles';
 import Card from './card';
 import info from './info';
 
-const UNSEARCH_KEY = -1;
+const NOT_FOUND_KEY = -1;
+const SM = 4;
+const SPACING = 2;
 
-const WritersList = ({ classes: { writersList }, query }) => {
-  const arr = [];
-
-  info.forEach(
-    (value) => {
-      const { name, place } = value;
-      if (name.search(new RegExp(query, 'i')) !== UNSEARCH_KEY || place.search(new RegExp(query, 'i')) !== UNSEARCH_KEY) {
-        arr.push(value);
-      }
-    },
-  );
-
-  return (
-    <Grid className={writersList} container justify="center" spacing={2}>
-      {
-        Array.from({ length: arr.length }, () => null).map((field, i) => (
-          <Grid item sm={4} key={i.toString() + 1}>
+const WritersList = ({ classes: { writersList }, query }) => (
+  <Grid className={writersList} container justify="center" spacing={SPACING}>
+    {
+      info
+        .filter((value) => {
+          const { name, place } = value;
+          return name.search(new RegExp(query, 'i')) !== NOT_FOUND_KEY || place.search(new RegExp(query, 'i')) !== NOT_FOUND_KEY;
+        })
+        .map((field, i, arr) => (
+          <Grid item sm={SM} key={i.toString() + 1}>
             <Card info={arr[i]} />
           </Grid>
         ))
-      }
-    </Grid>
-  );
-};
-
+    }
+  </Grid>
+);
 
 WritersList.propTypes = {
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
