@@ -34,6 +34,18 @@ const WriterComponent = ({
         </Timeline>
       </p>
       <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
+      <SlideShow
+        images={GalleryContent}
+        width="920px"
+        imagesWidth="800px"
+        imagesHeight="450px"
+        imagesHeightMobile="56vw"
+        thumbnailsWidth="920px"
+        thumbnailsHeight="12vw"
+        indicators
+        thumbnails
+        fixedImagesHeight
+      />
       <Video videoId={video} />
 
       <Link to="/writers/">View more writers</Link>
