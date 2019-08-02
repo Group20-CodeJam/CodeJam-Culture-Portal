@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'gatsby';
-import SlideShow from 'react-image-show';
+import SlideShow from '../../../react-image-show/src';
 import Video from '../video';
 import Layout from '../layout';
 
@@ -34,8 +34,6 @@ const WriterComponent = ({
         </Timeline>
       </p>
       <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
-      {window
-      && (
       <SlideShow
         images={GalleryContent}
         width="920px"
@@ -49,7 +47,6 @@ const WriterComponent = ({
         fixedImagesHeight
       />
       )
-      }
       <Video videoId={video} />
 
       <Link to="/writers/">View more writers</Link>

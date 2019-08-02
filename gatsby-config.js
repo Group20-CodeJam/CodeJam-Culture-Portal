@@ -46,6 +46,12 @@ module.exports = {
         name: 'locale',
       },
     },
+    {
+      resolve: 'gatsby-plugin-less',
+      options: {
+        strictMath: true,
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
