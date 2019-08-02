@@ -2,17 +2,40 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
 import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/styles';
 
+import styles from './styles';
 
-import 'video-react/dist/video-react.css';
+const Video = ({
+  videoId, onClose, isOpen, classes: { button, video, iframe },
+}) => (
 
-const Video = ({ videoId, onClose, isOpen }) => (
   <Dialog
+    classes={{ paper: video }}
+    fullWidth="true"
     open={isOpen}
     onClose={onClose}
   >
-    <iframe title="frame" src={`https://www.youtube.com/embed/${videoId}`} frameBorder="0" />
-    <Button onClick={onClose}>Close</Button>
+    <iframe
+      title="frame"
+      src={`https://www.youtube.com/embed/${videoId}`}
+      frameBorder="0"
+      autoPlay="1"
+      fs="1"
+      style={
+        {
+          height: '80vh',
+          marginBottom: '0',
+        }
+      }
+    />
+    <Button
+      className={button}
+      onClick={onClose}
+      variant="outlined"
+    >
+      X
+    </Button>
   </Dialog>
 );
 
@@ -20,5 +43,7 @@ Video.propTypes = {
   videoId: PropTypes.string.isRequired,
   onClose: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
+  classes: PropTypes.objectOf(PropTypes.object).isRequired,
 };
-export default Video;
+
+export default withStyles(styles)(Video);
