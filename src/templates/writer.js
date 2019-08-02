@@ -5,7 +5,7 @@ import WriterContainer from '../containers/writerContainer';
 
 const Writer = ({ data }) => {
   const {
-    authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery, video,
+    authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery, video, placeOfMajorActivity,
   } = data.contentfulWriter;
 
   return (
@@ -17,6 +17,7 @@ const Writer = ({ data }) => {
       listOfWorks={listOfWorks}
       photoGallery={photoGallery}
       video={video}
+      placeOfMajorActivity={placeOfMajorActivity}
     />
 
   );
@@ -53,6 +54,10 @@ export const pageQuery = graphql`
           }
       }
       video
+      placeOfMajorActivity {
+        lat
+        lon
+      }
     }
   }
 `;
