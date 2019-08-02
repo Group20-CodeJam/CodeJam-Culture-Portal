@@ -34,7 +34,18 @@ const WriterComponent = ({
         </Timeline>
       </p>
       <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
-      <Carousel>
+      <Carousel
+        autoplay
+        enableKeyboardControls
+        disableEdgeSwiping
+        wrapAround
+        renderCenterLeftControls={({ previousSlide }) => (
+          <button type="button" onClick={previousSlide}>{'<'}</button>
+        )}
+        renderCenterRightControls={({ nextSlide }) => (
+          <button type="button" onClick={nextSlide}>{'>'}</button>
+        )}
+      >
         {
           GalleryContent.map(el => (
             <div>
