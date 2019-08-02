@@ -4,7 +4,7 @@ import WriterComponent from '../../components/writer';
 
 
 const WriterContainer = ({
-  authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery, video,
+  authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery, video, placeOfMajorActivity,
 }) => {
   const timelineContent = [];
   biography.forEach((item) => {
@@ -30,6 +30,7 @@ const WriterContainer = ({
       GalleryContent={GalleryContent}
       listOfWorks={listOfWorks}
       video={video}
+      placeOfMajorActivity={placeOfMajorActivity}
     />
   );
 };
@@ -42,6 +43,7 @@ WriterContainer.propTypes = {
   listOfWorks: PropTypes.objectOf(PropTypes.object).isRequired,
   photoGallery: PropTypes.objectOf(PropTypes.object).isRequired,
   video: PropTypes.string.isRequired,
+  placeOfMajorActivity: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default WriterContainer;

@@ -8,7 +8,7 @@ import Video from '../video';
 import Layout from '../layout';
 
 const WriterComponent = ({
-  authorsName, yearsOfLife, image, timelineContent, GalleryContent, listOfWorks, video,
+  authorsName, yearsOfLife, image, timelineContent, GalleryContent, listOfWorks, video, placeOfMajorActivity,
 }) => (
   <Layout>
     <div className="writer">
@@ -63,6 +63,7 @@ WriterComponent.propTypes = {
   listOfWorks: PropTypes.objectOf(PropTypes.object).isRequired,
   GalleryContent: PropTypes.objectOf(PropTypes.object).isRequired,
   video: PropTypes.string.isRequired,
+  placeOfMajorActivity: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default WriterComponent;
