@@ -4,7 +4,8 @@ import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'gatsby';
 import SlideShow from 'react-image-show';
-import Video from '../video';
+
+import VideoContanier from '../../containers/videoContainer';
 import Layout from '../layout';
 
 const WriterComponent = ({
@@ -34,6 +35,7 @@ const WriterComponent = ({
         </Timeline>
       </p>
       <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
+
       <SlideShow
         images={GalleryContent}
         width="920px"
@@ -46,8 +48,7 @@ const WriterComponent = ({
         thumbnails
         fixedImagesHeight
       />
-      <Video videoId={video} />
-
+      <VideoContanier videoId={video} />
       <Link to="/writers/">View more writers</Link>
       <Link to="/">Back to Home</Link>
     </div>
