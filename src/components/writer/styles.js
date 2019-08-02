@@ -18,4 +18,8 @@ export default {
       color: '#eeedff',
     },
   },
+  timeLine: {
+    background: '#744b67',
+    color: '#fff',
+  },
 };

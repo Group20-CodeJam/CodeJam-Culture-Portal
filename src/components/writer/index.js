@@ -30,7 +30,8 @@ const WriterComponent = ({
             <TimelineItem
               key={item.period}
               dateText={item.period}
-              style={{ color: '#e86971' }}
+              dateInnerStyle={{ background: '#744b67', color: '#fff' }}
+              style={{ color: '#744b67' }}
             >
               <p>
                 {item.text}
