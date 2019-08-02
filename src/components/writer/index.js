@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'gatsby';
-import SlideShow from 'react-image-show';
+import Carousel from 'nuka-carousel';
 import Video from '../video';
 import Layout from '../layout';
 
@@ -34,18 +34,15 @@ const WriterComponent = ({
         </Timeline>
       </p>
       <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
-      <SlideShow
-        images={GalleryContent}
-        width="920px"
-        imagesWidth="800px"
-        imagesHeight="450px"
-        imagesHeightMobile="56vw"
-        thumbnailsWidth="920px"
-        thumbnailsHeight="12vw"
-        indicators
-        thumbnails
-        fixedImagesHeight
-      />
+      <Carousel>
+        {
+          GalleryContent.map(el => (
+            <div>
+              <img src={el} alt="gallery" style={{ width: '920px', height: '560px' }} />
+            </div>
+          ))
+        }
+      </Carousel>
       <Video videoId={video} />
 
       <Link to="/writers/">View more writers</Link>
