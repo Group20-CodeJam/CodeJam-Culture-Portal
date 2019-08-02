@@ -1,21 +1,49 @@
 import React from 'react';
-import ModalVideo from 'react-modal-video';
 import PropTypes from 'prop-types';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/styles';
 
+import styles from './styles';
 
 const Video = ({
-  onClose, openModal, videoId, isOpen,
+  videoId, onClose, isOpen, classes: { button, video, iframe },
 }) => (
-  <div>
-    <ModalVideo channel="youtube" isOpen={isOpen} videoId={videoId} onClose={onClose} />
-    <button type="button" onClick={openModal}>Watch video</button>
-  </div>
+
+  <Dialog
+    classes={{ paper: video }}
+    fullWidth="true"
+    open={isOpen}
+    onClose={onClose}
+  >
+    <iframe
+      title="frame"
+      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+      frameBorder="0"
+      allow="autoplay"
+      allowFullScreen
+      style={
+        {
+          height: '80vh',
+          marginBottom: '0',
+        }
+      }
+    />
+    <Button
+      className={button}
+      onClick={onClose}
+      variant="outlined"
+    >
+      X
+    </Button>
+  </Dialog>
 );
+
 Video.propTypes = {
-  openModal: PropTypes.func.isRequired,
-  onClose: PropTypes.func.isRequired,
   videoId: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
   isOpen: PropTypes.bool.isRequired,
+  classes: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
-export default Video;
+export default withStyles(styles)(Video);

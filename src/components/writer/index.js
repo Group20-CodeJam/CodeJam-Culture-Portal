@@ -4,11 +4,12 @@ import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import ReactMarkdown from 'react-markdown';
 import { Link } from 'gatsby';
 import SlideShow from 'react-image-show';
-import Video from '../video';
+
+import VideoContanier from '../../containers/videoContainer';
 import Layout from '../layout';
 
 const WriterComponent = ({
-  authorsName, yearsOfLife, image, timelineContent, GalleryContent, listOfWorks, video,
+  authorsName, yearsOfLife, image, timelineContent, GalleryContent, listOfWorks, video, placeOfMajorActivity,
 }) => (
   <Layout>
     <div className="writer">
@@ -34,8 +35,7 @@ const WriterComponent = ({
         </Timeline>
       </p>
       <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
-      {window
-      && (
+
       <SlideShow
         images={GalleryContent}
         width="920px"
@@ -48,10 +48,7 @@ const WriterComponent = ({
         thumbnails
         fixedImagesHeight
       />
-      )
-      }
-      <Video videoId={video} />
-
+      <VideoContanier videoId={video} />
       <Link to="/writers/">View more writers</Link>
       <Link to="/">Back to Home</Link>
     </div>
@@ -67,6 +64,7 @@ WriterComponent.propTypes = {
   listOfWorks: PropTypes.objectOf(PropTypes.object).isRequired,
   GalleryContent: PropTypes.objectOf(PropTypes.object).isRequired,
   video: PropTypes.string.isRequired,
+  placeOfMajorActivity: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default WriterComponent;
