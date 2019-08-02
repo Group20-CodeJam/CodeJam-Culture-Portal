@@ -26,7 +26,7 @@ const MyMapComponent = compose(
   coordinates, authorsName, onOpen, isOpen,
 }) => (
   <GoogleMap
-    defaultZoom={6}
+    defaultZoom={7}
     defaultCenter={{
       lat: 53.902496,
       lng: 27.561481,
