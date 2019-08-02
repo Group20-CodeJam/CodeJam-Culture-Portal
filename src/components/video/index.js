@@ -18,10 +18,10 @@ const Video = ({
   >
     <iframe
       title="frame"
-      src={`https://www.youtube.com/embed/${videoId}`}
+      src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
       frameBorder="0"
-      autoPlay="1"
-      fs="1"
+      allow="autoplay"
+      allowFullScreen
       style={
         {
           height: '80vh',
