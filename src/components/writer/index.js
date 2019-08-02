@@ -6,6 +6,7 @@ import { Link } from 'gatsby';
 import SlideShow from 'react-image-show';
 import Video from '../video';
 import Layout from '../layout';
+import MyMapComponent from './map';
 
 const WriterComponent = ({
   authorsName, yearsOfLife, image, timelineContent, GalleryContent, listOfWorks, video,
@@ -51,6 +52,13 @@ const WriterComponent = ({
       )
       }
       <Video videoId={video} />
+      <MyMapComponent
+        coordinates={{
+          lat: 53.902496,
+          lng: 27.561481,
+        }}
+        authorsName={authorsName}
+      />
 
       <Link to="/writers/">View more writers</Link>
       <Link to="/">Back to Home</Link>
