@@ -18,11 +18,7 @@ const WriterContainer = ({
 
   const GalleryContent = [];
   photoGallery.forEach((item) => {
-    GalleryContent.push(
-      {
-        src: item.file.url,
-      },
-    );
+    GalleryContent.push(item.file.url);
   });
 
   return (
