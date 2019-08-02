@@ -32,6 +32,7 @@ const Team = ({
   </div>
 );
 
+
 Team.propTypes = {
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
 };
