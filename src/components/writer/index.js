@@ -10,7 +10,6 @@ import VideoContanier from '../../containers/videoContainer';
 import Layout from '../layout';
 import MyMapComponent from './map';
 
-
 import styles from './styles';
 
 const WriterComponent = ({
@@ -73,7 +72,7 @@ const WriterComponent = ({
               <img
                 src={el}
                 alt="gallery"
-                style={{ width: '920px', height: '560px' }}
+                style={{ width: '100%', height: '98%' }}
               />
             </div>
           ))
