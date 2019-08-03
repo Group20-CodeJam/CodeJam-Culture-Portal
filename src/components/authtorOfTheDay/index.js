@@ -18,9 +18,10 @@ if (typeof window !== 'undefined' && window) {
   if (localStorage.getItem('flag')) {
     ID = localStorage.getItem('id');
   }
+
+  localStorage.setItem('id', ID);
+  localStorage.setItem('flag', true);
 }
-localStorage.setItem('id', ID);
-localStorage.setItem('flag', true);
 
 
 const AuthorOfTheDay = ({
