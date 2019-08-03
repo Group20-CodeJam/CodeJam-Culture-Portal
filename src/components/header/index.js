@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/styles';
 import styles from './styles';
 import NavTabs from './nav';
 
-import logo from '../../images/logo.png';
+import logo from '../../images/pen.png';
 
 const options = [
   { value: 'ru', label: 'ru' },

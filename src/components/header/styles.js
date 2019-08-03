@@ -7,9 +7,9 @@ export default {
     alignItems: 'center',
     justifyContent: 'space-around',
     '& img': {
-      width: '8%',
-      height: '90%',
-      marginTop: '5px',
+      width: '12%',
+      height: '100%',
+      margin: '7px',
     },
   },
   nav: {
@@ -24,5 +24,8 @@ export default {
     textDecoration: 'none',
     marginRight: '30px',
     fontSize: '24px',
+    '&:hover': {
+      borderBottom: '1px solid #ffffff',
+    },
   },
 };

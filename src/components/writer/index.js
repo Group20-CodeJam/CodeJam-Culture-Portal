@@ -8,6 +8,7 @@ import { withStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
 import VideoContanier from '../../containers/videoContainer';
 import Layout from '../layout';
+import MyMapComponent from './map';
 
 import styles from './styles';
 
@@ -78,6 +79,13 @@ const WriterComponent = ({
         }
       </Carousel>
       <VideoContanier videoId={video} />
+      <MyMapComponent
+        coordinates={{
+          lat: placeOfMajorActivity.lat,
+          lng: placeOfMajorActivity.lon,
+        }}
+        authorsName={authorsName}
+      />
 
       <Link to="/writers/">View more writers</Link>
       <Link to="/">Back to Home</Link>
