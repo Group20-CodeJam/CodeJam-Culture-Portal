@@ -22,4 +22,9 @@ export default {
     background: '#744b67',
     color: '#fff',
   },
+  sliderImg: {
+    width: '100%',
+    height: '95%',
+    maxHeight: '518px',
+  },
 };

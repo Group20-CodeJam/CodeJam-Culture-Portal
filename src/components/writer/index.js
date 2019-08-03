@@ -10,13 +10,12 @@ import VideoContanier from '../../containers/videoContainer';
 import Layout from '../layout';
 import MyMapComponent from './map';
 
-
 import styles from './styles';
 
 const WriterComponent = ({
   authorsName, yearsOfLife, image, timelineContent,
   GalleryContent, listOfWorks, video, placeOfMajorActivity,
-  classes: { button },
+  classes: { button, sliderImg },
 }) => (
   <Layout>
     <div className="writer">
@@ -73,7 +72,7 @@ const WriterComponent = ({
               <img
                 src={el}
                 alt="gallery"
-                style={{ width: '920px', height: '560px' }}
+                className={sliderImg}
               />
             </div>
           ))
