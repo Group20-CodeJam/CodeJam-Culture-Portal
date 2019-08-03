@@ -2,12 +2,10 @@ import React from 'react';
 
 import { withStyles } from '@material-ui/styles';
 import PropTypes from 'prop-types';
-import data from '../../locales/ru/info';
 import styles from './styles';
 
-
 const IndexPage = ({
-  classes: { containerParagraph, paragraph },
+  data, classes: { containerParagraph, paragraph },
 }) => (
   <div>
     <h2 style={{ textAlign: 'center' }}>
@@ -23,6 +21,7 @@ const IndexPage = ({
 
 IndexPage.propTypes = {
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default withStyles(styles)(IndexPage);

@@ -1,0 +1,164 @@
+{
+  "ru": {
+    "headline": "Писатель дня",
+    "linkPage": "Перейти",
+    "info": [
+      {
+        "id": "1",
+        "name": "Якуб Колас",
+        "place": "деревня Акинчицы",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Yakub_Kolas.jpg/267px-Yakub_Kolas.jpg",
+        "day": "22.10.1882",
+        "link": "kolas"
+      },
+      {
+        "id": "2",
+        "name": "Кондрат Крапива",
+        "photo": "https://data.fantlab.ru/images/autors/15312",
+        "place": "деревня Низок",
+        "day": "07.01.1991",
+        "link": "krapiva"
+      },
+      {
+        "id": "3",
+        "name": "Янка Купала",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yanka_Kupala.jpg/267px-Yanka_Kupala.jpg",
+        "place": "деревня Вязынка",
+        "day": "28.06.1942",
+        "link": "kupala"
+      },
+      {
+        "id": "4",
+        "name": "Максим Танк",
+        "photo": "https://upload.wikimedia.org/wikipedia/be/c/c2/MTank.jpg",
+        "place": "деревня Пильковщина",
+        "day": "07.08.1995",
+        "link": "tank"
+      },
+      {
+        "id": "5",
+        "name": "Василь Быков",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Vasil_Bykov_%28cropped%29.jpg ",
+        "place": "деревня Бычки",
+        "day": "28.06.1942",
+        "link": "bykov"
+      },
+      {
+        "id": "6",
+        "name": "Рыгор Бородулин",
+        "photo": "https://s1-people.ozstatic.by/200/701/66/9/9066701_0.jpg",
+        "place": "хутор Вересовка",
+        "day": "28.06.1942",
+        "link": "borodulin"
+      }
+    ]
+  },
+  "by": {
+    "headline": "Пісьменнік дня",
+    "linkPage": "Перайсці",
+    "info": [
+      {
+        "id": "1",
+        "name": "Якуб Колас",
+        "place": "вёска Акінчыцы",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Yakub_Kolas.jpg/267px-Yakub_Kolas.jpg",
+        "day": "22.10.1882",
+        "link": "kolas"
+      },
+      {
+        "id": "2",
+        "name": "Кандрат Крапіва",
+        "photo": "https://data.fantlab.ru/images/autors/15312",
+        "place": "вёска Нізок",
+        "day": "07.01.1991",
+        "link": "krapiva"
+      },
+      {
+        "id": "3",
+        "name": "Янка Купала",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yanka_Kupala.jpg/267px-Yanka_Kupala.jpg",
+        "place": "вёска Вязынка",
+        "day": "28.06.1942",
+        "link": "kupala"
+      },
+      {
+        "id": "4",
+        "name": "Максім Танк",
+        "photo": "https://upload.wikimedia.org/wikipedia/be/c/c2/MTank.jpg",
+        "place": "вёска Пильковщина",
+        "day": "07.08.1995",
+        "link": "tank"
+      },
+      {
+        "id": "5",
+        "name": "Васіль Быкаў",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Vasil_Bykov_%28cropped%29.jpg ",
+        "place": "вёска Бычкі",
+        "day": "28.06.1942",
+        "link": "bykov"
+      },
+      {
+        "id": "6",
+        "name": "Рыгор Барадулін",
+        "photo": "https://s1-people.ozstatic.by/200/701/66/9/9066701_0.jpg",
+        "place": "хутар Вересовка",
+        "day": "28.06.1942",
+        "link": "borodulin"
+      }
+    ]
+  },
+  "en": {
+    "headline": "Writer of the day",
+    "linkPage": "Go to",
+    "info": [
+      {
+        "id": "1",
+        "name": "Yakub Kolas",
+        "place": "Akinchitsy village",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Yakub_Kolas.jpg/267px-Yakub_Kolas.jpg",
+        "day": "22.10.1882",
+        "link": "kolas"
+      },
+      {
+        "id": "2",
+        "name": "Kondrat Krapiva",
+        "photo": "https://data.fantlab.ru/images/autors/15312",
+        "place": "Nizok village",
+        "day": "07.01.1991",
+        "link": "krapiva"
+      },
+      {
+        "id": "3",
+        "name": "Yanka Kupala",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Yanka_Kupala.jpg/267px-Yanka_Kupala.jpg",
+        "place": "Vyazynka village",
+        "day": "28.06.1942",
+        "link": "kupala"
+      },
+      {
+        "id": "4",
+        "name": "Maxim Tank",
+        "photo": "https://upload.wikimedia.org/wikipedia/be/c/c2/MTank.jpg",
+        "place": "Pilkovschina village",
+        "day": "07.08.1995",
+        "link": "tank"
+      },
+      {
+        "id": "5",
+        "name": "Vasil Bykov",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Vasil_Bykov_%28cropped%29.jpg ",
+        "place": "Bychki village",
+        "day": "28.06.1942",
+        "link": "bykov"
+      },
+      {
+        "id": "6",
+        "name": "Ryhor Borodulin",
+        "photo": "https://s1-people.ozstatic.by/200/701/66/9/9066701_0.jpg",
+        "place": "farm Veresovka",
+        "day": "28.06.1942",
+        "link": "borodulin"
+      }
+    ]
+  }
+}
