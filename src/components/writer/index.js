@@ -15,7 +15,7 @@ import styles from './styles';
 const WriterComponent = ({
   authorsName, yearsOfLife, image, timelineContent,
   GalleryContent, listOfWorks, video, placeOfMajorActivity,
-  classes: { button },
+  classes: { button, sliderImg },
 }) => (
   <Layout>
     <div className="writer">
@@ -72,7 +72,7 @@ const WriterComponent = ({
               <img
                 src={el}
                 alt="gallery"
-                style={{ width: '100%', height: '98%' }}
+                className={sliderImg}
               />
             </div>
           ))
