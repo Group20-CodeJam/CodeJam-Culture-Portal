@@ -10,7 +10,6 @@ import VideoContanier from '../../containers/videoContainer';
 import Layout from '../layout';
 import MyMapComponent from './map';
 
-import styles from './styles';
 
 import styles from './styles';
 
