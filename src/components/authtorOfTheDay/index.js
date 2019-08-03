@@ -7,7 +7,6 @@ import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import { Link } from 'gatsby';
 import styles from './styles';
-import data from './info.json';
 
 const MAX = 6;
 const MIN = 1;
@@ -23,14 +22,14 @@ if (typeof window !== 'undefined' && window) {
   localStorage.setItem('flag', true);
 }
 
-
 const AuthorOfTheDay = ({
+  data: { headline, linkPage, info },
   classes: {
     root, subtitle, image, img,
   },
 }) => (
   <div>
-    {JSON.parse(JSON.stringify(data)).filter(value => value.id == ID)
+    {JSON.parse(JSON.stringify(info)).filter(value => value.id === ID)
       .map(({
         name, photo, place, day, link,
       }) => (
@@ -40,7 +39,7 @@ const AuthorOfTheDay = ({
               <Grid item xs container direction="column" spacing={2}>
                 <Grid item xs>
                   <Typography gutterBottom variant="subtitle1" className={subtitle}>
-                  Писатель дня
+                    {headline}
                   </Typography>
                   <Typography variant="body2" gutterBottom>
                     {name}
@@ -63,7 +62,7 @@ const AuthorOfTheDay = ({
           <Grid item>
             <Typography variant="body2">
               <ButtonBase>
-                <Link to={`/writer/${link}/`}>Перейти</Link>
+                <Link to={`/writer/${link}/`}>{linkPage}</Link>
               </ButtonBase>
             </Typography>
           </Grid>
@@ -72,9 +71,9 @@ const AuthorOfTheDay = ({
   </div>
 );
 
-
 AuthorOfTheDay.propTypes = {
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default withStyles(styles)(AuthorOfTheDay);

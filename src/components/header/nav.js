@@ -6,21 +6,23 @@ import Typography from '@material-ui/core/Typography';
 import styles from './styles';
 
 const NavTabs = ({
+  data: { main, writers },
   classes: { nav, link },
 }) => (
   <nav className={nav}>
     <Typography>
       <Link to="/" className={link}>
-          Main
+        {main}
       </Link>
       <Link to="/writers/" className={link}>
-          Writers
+        {writers}
       </Link>
     </Typography>
   </nav>
 );
 
 NavTabs.propTypes = {
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 

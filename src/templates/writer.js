@@ -5,7 +5,8 @@ import WriterContainer from '../containers/writerContainer';
 
 const Writer = ({ data }) => {
   const {
-    authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery, video, placeOfMajorActivity,
+    authorsName, yearsOfLife, image, biography,
+    listOfWorks, photoGallery, video, placeOfMajorActivity,
   } = data.contentfulWriter;
 
   return (

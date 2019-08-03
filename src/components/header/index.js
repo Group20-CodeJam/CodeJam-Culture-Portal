@@ -18,21 +18,32 @@ const colourStyles = {
 };
 
 const Header = ({
+  onSelect,
+  data,
   classes: { header },
-}) => (
-  <header className={header}>
-    <img src={logo} alt="logo" />
-    <NavTabs />
-    <Select
-      options={options}
-      defaultValue={options[0]}
-      styles={colourStyles}
-    />
-  </header>
-);
+}) => {
+  const handleChange = (selectedOption) => {
+    onSelect(selectedOption.value);
+  };
+
+  return (
+    <header className={header}>
+      <img src={logo} alt="logo" />
+      <NavTabs data={data} />
+      <Select
+        options={options}
+        defaultValue={options[0]}
+        styles={colourStyles}
+        onChange={handleChange}
+      />
+    </header>
+  );
+};
 
 Header.propTypes = {
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  onSelect: PropTypes.objectOf(PropTypes.object).isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default withStyles(styles)(Header);
