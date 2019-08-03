@@ -12,6 +12,8 @@ import MyMapComponent from './map';
 
 import styles from './styles';
 
+import styles from './styles';
+
 const WriterComponent = ({
   authorsName, yearsOfLife, image, timelineContent,
   GalleryContent, listOfWorks, video, placeOfMajorActivity,

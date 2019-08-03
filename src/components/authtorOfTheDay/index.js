@@ -13,13 +13,14 @@ const MAX = 6;
 const MIN = 1;
 let ID;
 
-if (localStorage.getItem('flag')) {
-  ID = localStorage.getItem('id');
-} else {
-  ID = Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
-  localStorage.setItem('id', ID);
-  localStorage.setItem('flag', true);
+ID = Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
+if (typeof window !== 'undefined' && window) {
+  if (localStorage.getItem('flag')) {
+    ID = localStorage.getItem('id');
+  }
 }
+localStorage.setItem('id', ID);
+localStorage.setItem('flag', true);
 
 
 const AuthorOfTheDay = ({
