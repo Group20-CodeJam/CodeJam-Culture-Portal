@@ -5,48 +5,72 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import { Link } from 'gatsby';
 import styles from './styles';
+import data from './info.json';
+
+const MAX = 6;
+const MIN = 1;
+let ID;
+
+if (localStorage.getItem('flag')) {
+  ID = localStorage.getItem('id');
+} else {
+  ID = Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
+  localStorage.setItem('id', ID);
+  localStorage.setItem('flag', true);
+}
+
 
 const AuthorOfTheDay = ({
   classes: {
     root, subtitle, image, img,
   },
 }) => (
-  <Paper className={root}>
-    <Grid container spacing={2}>
-      <Grid item xs={10} sm container>
-        <Grid item xs container direction="column" spacing={2}>
-          <Grid item xs>
-            <Typography gutterBottom variant="subtitle1" className={subtitle}>
+  <div>
+    {JSON.parse(JSON.stringify(data)).filter(value => value.id == ID)
+      .map(({
+        name, photo, place, day, link,
+      }) => (
+        <Paper className={root}>
+          <Grid container spacing={2}>
+            <Grid item xs={10} sm container>
+              <Grid item xs container direction="column" spacing={2}>
+                <Grid item xs>
+                  <Typography gutterBottom variant="subtitle1" className={subtitle}>
                   Писатель дня
-            </Typography>
-            <Typography variant="body2" gutterBottom>
-                  Василь Быков
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-                  19.06.1924
-            </Typography>
-            <Typography variant="body2" color="textSecondary">
-                  Белорусский писатель, общественный деятель.
+                  </Typography>
+                  <Typography variant="body2" gutterBottom>
+                    {name}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    {day}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary">
+                    {place}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </Grid>
+            <Grid item>
+              <ButtonBase className={image}>
+                <img className={img} alt="complex" src={photo} />
+              </ButtonBase>
+            </Grid>
+          </Grid>
+          <Grid item>
+            <Typography variant="body2">
+              <ButtonBase>
+                <Link to={`/writer/${link}/`}>Перейти</Link>
+              </ButtonBase>
             </Typography>
           </Grid>
-        </Grid>
-      </Grid>
-      <Grid item>
-        <ButtonBase className={image}>
-          <img className={img} alt="complex" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Vasil_Bykov_%28cropped%29.jpg/267px-Vasil_Bykov_%28cropped%29.jpg" />
-        </ButtonBase>
-      </Grid>
-    </Grid>
-    <Grid item>
-      <Typography variant="body2">
-        <ButtonBase>
-            Перейти
-        </ButtonBase>
-      </Typography>
-    </Grid>
-  </Paper>
+        </Paper>
+      ))}
+  </div>
 );
+
+
 AuthorOfTheDay.propTypes = {
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
 };

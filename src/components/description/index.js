@@ -2,7 +2,7 @@ import React from 'react';
 
 import { withStyles } from '@material-ui/styles';
 import PropTypes from 'prop-types';
-import data from '../../../locale/ru/info';
+import data from '../../locales/ru/info';
 import styles from './styles';
 
 
