@@ -49,7 +49,6 @@ const MyMapComponent = compose(
         </InfoBox>
       )}
     </Marker>
-    ))
   </GoogleMap>
 ));
 
