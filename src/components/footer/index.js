@@ -7,7 +7,7 @@ const Footer = ({
   classes: { footer, text }
 }) => (
   <footer className={footer}>
-    <p className={text}>ura</p>
+    <p className={text}>Made by Group20 © 2019</p>
   </footer>
 );
 
