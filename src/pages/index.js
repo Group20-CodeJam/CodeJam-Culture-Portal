@@ -8,7 +8,7 @@ import Team from '../components/team';
 import Header from '../components/header';
 
 import dataDescription from '../../data/description';
-import dataAuthorOfTheDay from '../../data/authorOfTheDay';
+import dataAuthorOfTheDay from '../../data/authors';
 import dataHeaderInfo from '../../data/headerInfo';
 import dataTeam from '../../data/infoTeam';
 import dataNameTeam from '../../data/nameTeam';

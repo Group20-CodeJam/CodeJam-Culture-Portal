@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 import WriterContainer from '../containers/writerContainer';
+
+import Header from '../components/header';
+import dataHeaderInfo from '../../data/headerInfo';
 
 const Writer = ({ data }) => {
   const {
@@ -9,18 +12,29 @@ const Writer = ({ data }) => {
     listOfWorks, photoGallery, video, placeOfMajorActivity,
   } = data.contentfulWriter;
 
-  return (
-    <WriterContainer
-      authorsName={authorsName}
-      yearsOfLife={yearsOfLife}
-      image={image}
-      biography={biography}
-      listOfWorks={listOfWorks}
-      photoGallery={photoGallery}
-      video={video}
-      placeOfMajorActivity={placeOfMajorActivity}
-    />
+  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo.ru);
 
+  const сhangeLanguage = (languageValue) => {
+    setHeaderInfo(dataHeaderInfo[languageValue]);
+  };
+
+  return (
+    <div>
+      <Header
+        data={headerInfo}
+        onSelect={сhangeLanguage}
+      />
+      <WriterContainer
+        authorsName={authorsName}
+        yearsOfLife={yearsOfLife}
+        image={image}
+        biography={biography}
+        listOfWorks={listOfWorks}
+        photoGallery={photoGallery}
+        video={video}
+        placeOfMajorActivity={placeOfMajorActivity}
+      />
+    </div>
   );
 };
 

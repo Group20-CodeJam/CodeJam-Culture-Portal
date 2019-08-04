@@ -1,7 +1,8 @@
 {
   "ru": {
     "headline": "Писатель дня",
-    "linkPage": "Перейти",
+    "linkPage": "Перейти на страницу писателя",
+    "placeBirth": "Место рождения:",
     "info": [
       {
         "id": "1",
@@ -55,7 +56,8 @@
   },
   "by": {
     "headline": "Пісьменнік дня",
-    "linkPage": "Перайсці",
+    "linkPage": "Перайсці на старонку пісьменніка",
+    "placeBirth": "Месца нараджэння:",
     "info": [
       {
         "id": "1",
@@ -109,7 +111,8 @@
   },
   "en": {
     "headline": "Writer of the day",
-    "linkPage": "Go to",
+    "linkPage": "Go to the writer's page",
+    "placeBirth": "Place of Birth:",
     "info": [
       {
         "id": "1",
