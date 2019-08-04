@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { withStyles } from '@material-ui/styles';
+import styles from './styles';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -15,12 +17,20 @@ import dataTeam from '../../data/infoTeam';
 import dataNameTeam from '../../data/nameTeam';
 
 const IndexPage = () => {
-  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo.ru);
-  const [description, setDescription] = useState(dataDescription.ru);
-  const [authorOfDay, setAuthorOfDay] = useState(dataAuthorOfTheDay.ru);
-  const [nameTeam, setNameTeam] = useState(dataNameTeam.ru);
+  let languageStorage = 'ru';
+  if (typeof window !== 'undefined' && window) {
+    if (localStorage.getItem('lang')) {
+      languageStorage = localStorage.getItem('lang');
+    }
+  }
+
+  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo[languageStorage]);
+  const [description, setDescription] = useState(dataDescription[languageStorage]);
+  const [authorOfDay, setAuthorOfDay] = useState(dataAuthorOfTheDay[languageStorage]);
+  const [nameTeam, setNameTeam] = useState(dataNameTeam[languageStorage]);
 
   const сhangeLanguage = (languageValue) => {
+    localStorage.setItem('lang', languageValue);
     setDescription(dataDescription[languageValue]);
     setAuthorOfDay(dataAuthorOfTheDay[languageValue]);
     setHeaderInfo(dataHeaderInfo[languageValue]);
@@ -52,4 +62,4 @@ const IndexPage = () => {
   );
 };
 
-export default IndexPage;
+export default withStyles(styles)(IndexPage);

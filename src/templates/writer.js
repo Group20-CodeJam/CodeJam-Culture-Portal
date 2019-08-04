@@ -13,10 +13,18 @@ const Writer = ({ data }) => {
     listOfWorks, photoGallery, video, placeOfMajorActivity,
   } = data.contentfulWriter;
 
-  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo.ru);
-  const [language, setLanguage] = useState('ru');
+  let languageStorage = 'ru';
+  if (typeof window !== 'undefined' && window) {
+    if (localStorage.getItem('lang')) {
+      languageStorage = localStorage.getItem('lang');
+    }
+  }
+
+  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo[languageStorage]);
+  const [language, setLanguage] = useState(languageStorage);
 
   const сhangeLanguage = (languageValue) => {
+    localStorage.setItem('lang', languageValue);
     setHeaderInfo(dataHeaderInfo[languageValue]);
     setLanguage(languageValue);
   };

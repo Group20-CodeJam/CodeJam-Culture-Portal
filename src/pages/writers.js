@@ -12,12 +12,20 @@ import dataSearch from '../../data/dataSearch';
 import dataAuthors from '../../data/authors';
 
 const SecondPage = () => {
+  let languageStorage = 'ru';
+  if (typeof window !== 'undefined' && window) {
+    if (localStorage.getItem('lang')) {
+      languageStorage = localStorage.getItem('lang');
+    }
+  }
+
   const [searchQuery, setSearchQuery] = useState('');
-  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo.ru);
-  const [searchInfo, setSearchInfo] = useState(dataSearch.ru);
-  const [authorsInfo, setAuthorsInfo] = useState(dataAuthors.ru);
+  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo[languageStorage]);
+  const [searchInfo, setSearchInfo] = useState(dataSearch[languageStorage]);
+  const [authorsInfo, setAuthorsInfo] = useState(dataAuthors[languageStorage]);
 
   const сhangeLanguage = (languageValue) => {
+    localStorage.setItem('lang', languageValue);
     setHeaderInfo(dataHeaderInfo[languageValue]);
     setSearchInfo(dataSearch[languageValue]);
     setAuthorsInfo(dataAuthors[languageValue]);
