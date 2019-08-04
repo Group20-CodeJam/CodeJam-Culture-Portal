@@ -15,7 +15,7 @@
 .card {
   height: 450px;
   border-radius: 10px;
-  background: #b6689d36;
+  background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(116,75,103,1) 100%);
 }
 
 .place {
