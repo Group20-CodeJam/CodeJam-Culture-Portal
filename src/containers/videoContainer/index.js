@@ -36,7 +36,7 @@ const VideoContainer = ({ videoButton, videoId, classes: { button, videoContaine
         onClick={openModal}
         variant="outlined"
       >
-        Просмотреть видео
+        Watch the video
       </Button>
     </div>
   );
