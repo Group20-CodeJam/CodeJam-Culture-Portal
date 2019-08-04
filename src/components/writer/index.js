@@ -86,9 +86,8 @@ const WriterComponent = ({
         }}
         authorsName={authorsName}
       />
-
-      <Link to="/writers/">View more writers</Link>
-      <Link to="/">Back to Home</Link>
+      <p><Link to="/writers/">View more writers</Link></p>
+      <p><Link to="/">Back to Home</Link></p>
     </div>
 
   </Layout>

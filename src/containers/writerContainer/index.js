@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import WriterComponent from '../../components/writer';
 
-
 const WriterContainer = ({
-  authorsName, yearsOfLife, image, biography, listOfWorks, photoGallery, video, placeOfMajorActivity,
+  authorsName, yearsOfLife, image, biography,
+  listOfWorks, photoGallery, video, placeOfMajorActivity,
 }) => {
   const timelineContent = [];
   biography.forEach((item) => {

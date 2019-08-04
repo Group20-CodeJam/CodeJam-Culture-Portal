@@ -9,13 +9,14 @@ import dataHeaderInfo from '../../data/headerInfo';
 const Writer = ({ data }) => {
   const {
     authorsName, yearsOfLife, image, biography,
-    listOfWorks, photoGallery, video, placeOfMajorActivity,
+    listOfWorks, photoGallery, video, placeOfMajorActivity, slug,
   } = data.contentfulWriter;
 
-  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo.ru);
+  const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo[slug.split('-')[1]]);
 
   const сhangeLanguage = (languageValue) => {
     setHeaderInfo(dataHeaderInfo[languageValue]);
+    window.location.assign(`/writer/${slug.split('-')[0]}-${languageValue}/`);
   };
 
   return (

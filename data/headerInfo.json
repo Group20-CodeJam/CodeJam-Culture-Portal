@@ -1,13 +1,16 @@
 {
   "ru": {
+    "id": 0,
     "main": "Главная",
     "writers": "Писатели"
   },
   "by": {
+    "id": 1,
     "main": "Галоўная",
     "writers": "Пісьменнікі"
   },
   "en": {
+    "id": 2,
     "main": "Main",
     "writers": "Writers"
   }
