@@ -25,7 +25,7 @@ if (typeof window !== 'undefined' && window) {
 const AuthorOfTheDay = ({
   data: { headline, linkPage, info },
   classes: {
-    root, subtitle, image, img,
+    root, subtitle, image, img, button,
   },
 }) => (
   <div>
@@ -62,7 +62,7 @@ const AuthorOfTheDay = ({
           <Grid item>
             <Typography variant="body2">
               <ButtonBase>
-                <Link to={`/writer/${link}/`}>{linkPage}</Link>
+                <Link to={`/writer/${link}/`} className={button}>{linkPage}</Link>
               </ButtonBase>
             </Typography>
           </Grid>

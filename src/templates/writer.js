@@ -4,6 +4,7 @@ import { graphql } from 'gatsby';
 import WriterContainer from '../containers/writerContainer';
 
 import Header from '../components/header';
+import Footer from '../components/footer';
 import dataHeaderInfo from '../../data/headerInfo';
 
 const Writer = ({ data }) => {
@@ -21,7 +22,12 @@ const Writer = ({ data }) => {
   };
 
   return (
-    <div>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100%',
+    }}
+    >
       <Header
         data={headerInfo}
         onSelect={сhangeLanguage}
@@ -36,6 +42,7 @@ const Writer = ({ data }) => {
         video={video}
         placeOfMajorActivity={placeOfMajorActivity}
       />
+      <Footer />
     </div>
   );
 };

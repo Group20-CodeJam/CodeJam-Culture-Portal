@@ -5,6 +5,7 @@ import SEO from '../components/seo';
 import WritersList from '../containers/writersList';
 import SearchBox from '../containers/searchBox';
 import Header from '../components/header';
+import Footer from '../components/footer';
 
 import dataHeaderInfo from '../../data/headerInfo';
 import dataSearch from '../../data/dataSearch';
@@ -23,7 +24,12 @@ const SecondPage = () => {
   };
 
   return (
-    <div>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100%',
+    }}
+    >
       <Header
         data={headerInfo}
         onSelect={сhangeLanguage}
@@ -39,6 +45,7 @@ const SecondPage = () => {
           data={authorsInfo}
         />
       </Layout>
+      <Footer />
     </div>
   );
 };

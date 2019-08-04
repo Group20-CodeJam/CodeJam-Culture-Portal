@@ -6,6 +6,7 @@ import Description from '../components/description';
 import AuthorOfTheDay from '../components/authtorOfTheDay';
 import Team from '../components/team';
 import Header from '../components/header';
+import Footer from '../components/footer';
 
 import dataDescription from '../../data/description';
 import dataAuthorOfTheDay from '../../data/authors';
@@ -27,7 +28,12 @@ const IndexPage = () => {
   };
 
   return (
-    <div>
+    <div style={{
+      display: 'flex',
+      flexDirection: 'column',
+      minHeight: '100%',
+    }}
+    >
       <Header
         data={headerInfo}
         onSelect={сhangeLanguage}
@@ -41,6 +47,7 @@ const IndexPage = () => {
           data={dataTeam}
         />
       </Layout>
+      <Footer />
     </div>
   );
 };
