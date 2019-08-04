@@ -1,0 +1,44 @@
+.name {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+.photo {
+  height: 300px;
+  width: 250px;
+  display: block;
+  margin: auto;
+}
+
+.card {
+  height: 450px;
+  border-radius: 10px;
+  background: linear-gradient(0deg, rgba(238,238,238,1) 0%, rgba(116,75,103,1) 100%);
+}
+
+.place {
+  text-align: center;
+  font-family: sans-serif;
+  margin-bottom: 0px;
+}
+
+.link {
+  color: #744b67;
+  text-decoration: none;
+  font-family: sans-serif;
+  display: block;
+  line-height: 1.8rem;
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid #744b67;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.link:hover {
+  background: #744b67;
+  color: #eeedff;
+}
