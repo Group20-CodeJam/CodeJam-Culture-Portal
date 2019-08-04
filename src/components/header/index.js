@@ -9,8 +9,8 @@ import logo from '../../images/pen.png';
 
 const options = [
   { value: 'ru', label: 'ru' },
-  { value: 'en', label: 'en' },
   { value: 'by', label: 'by' },
+  { value: 'en', label: 'en' },
 ];
 
 const colourStyles = {
@@ -32,7 +32,7 @@ const Header = ({
       <NavTabs data={data} />
       <Select
         options={options}
-        defaultValue={options[0]}
+        defaultValue={options[data.id]}
         styles={colourStyles}
         onChange={handleChange}
       />

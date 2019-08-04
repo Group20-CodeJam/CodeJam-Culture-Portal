@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
 import ReactMarkdown from 'react-markdown';
-import { Link } from 'gatsby';
 import Carousel from 'nuka-carousel';
 import { withStyles } from '@material-ui/styles';
 import Button from '@material-ui/core/Button';
@@ -86,9 +85,6 @@ const WriterComponent = ({
         }}
         authorsName={authorsName}
       />
-
-      <Link to="/writers/">View more writers</Link>
-      <Link to="/">Back to Home</Link>
     </div>
 
   </Layout>

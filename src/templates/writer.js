@@ -8,14 +8,16 @@ import dataHeaderInfo from '../../data/headerInfo';
 
 const Writer = ({ data }) => {
   const {
-    authorsName, yearsOfLife, image, biography,
+    writerName, yearsWriter, image, biography,
     listOfWorks, photoGallery, video, placeOfMajorActivity,
   } = data.contentfulWriter;
 
   const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo.ru);
+  const [language, setLanguage] = useState('ru');
 
   const сhangeLanguage = (languageValue) => {
     setHeaderInfo(dataHeaderInfo[languageValue]);
+    setLanguage(languageValue);
   };
 
   return (
@@ -25,10 +27,10 @@ const Writer = ({ data }) => {
         onSelect={сhangeLanguage}
       />
       <WriterContainer
-        authorsName={authorsName}
-        yearsOfLife={yearsOfLife}
+        authorsName={writerName[language]}
+        yearsOfLife={yearsWriter[language]}
         image={image}
-        biography={biography}
+        biography={biography[language]}
         listOfWorks={listOfWorks}
         photoGallery={photoGallery}
         video={video}
@@ -49,17 +51,30 @@ export const pageQuery = graphql`
     contentfulWriter(slug: { eq: $slug }) {
         id
         slug
-        authorsName
         yearsOfLife
+        authorsName
+        writerName{
+          ru,by,en
+        }
+        yearsWriter{
+          ru,by,en
+        }
         biography {
+          ru {
+            period,text
+        },
+          by {
+            period,text
+        },
+          en {
             period,text
         }
+        } 
         image {
             file {
               url
             }
           }
-      
       listOfWorks {
         listOfWorks
       }
