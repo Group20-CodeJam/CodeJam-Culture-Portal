@@ -5,23 +5,22 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/styles';
 
-import styles from './styles';
+import styles from './styles.css';
 
 const SearchElement = ({
   data: { placeholder, buttonName },
-  classes: { searchBox, textField, button },
   handleChange, handleClick, handleKeyPress,
 }) => (
-  <div className={searchBox}>
+  <div className="searchBox">
     <TextField
-      className={textField}
+      className="textField"
       variant="outlined"
       placeholder={placeholder}
       onKeyPress={handleKeyPress}
       onChange={handleChange}
     />
     <Button
-      className={button}
+      className="button"
       onClick={handleClick}
       variant="outlined"
     >
@@ -31,7 +30,6 @@ const SearchElement = ({
 );
 
 SearchElement.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
   handleChange: PropTypes.func.isRequired,
   handleClick: PropTypes.func.isRequired,
   handleKeyPress: PropTypes.func.isRequired,
