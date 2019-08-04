@@ -13,7 +13,7 @@ import styles from './styles';
 
 const WriterComponent = ({
   authorsName, yearsOfLife, image, timelineContent,
-  GalleryContent, listOfWorks, video, placeOfMajorActivity,
+  GalleryContent, listOfWorks, video, placeOfMajorActivity, videoButton,
   classes: { button, sliderImg },
 }) => (
   <Layout>
@@ -40,7 +40,7 @@ const WriterComponent = ({
           ))}
         </Timeline>
       </p>
-      <p><ReactMarkdown source={listOfWorks.listOfWorks} /></p>
+      <p><ReactMarkdown source={listOfWorks} /></p>
       <Carousel
         autoplay
         enableKeyboardControls
@@ -77,7 +77,7 @@ const WriterComponent = ({
           ))
         }
       </Carousel>
-      <VideoContanier videoId={video} />
+      <VideoContanier videoButton={videoButton} videoId={video} />
       <MyMapComponent
         coordinates={{
           lat: placeOfMajorActivity.lat,
@@ -100,6 +100,7 @@ WriterComponent.propTypes = {
   video: PropTypes.string.isRequired,
   placeOfMajorActivity: PropTypes.objectOf(PropTypes.object).isRequired,
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  videoButton: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(WriterComponent);
