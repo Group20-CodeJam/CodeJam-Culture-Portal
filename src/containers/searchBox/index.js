@@ -5,7 +5,7 @@ import SearchElement from '../../components/searchElement';
 
 const ENTER_KEY = 'Enter';
 
-const SearchBox = ({ search }) => {
+const SearchBox = ({ search, data }) => {
   const [query, setQuery] = useState('');
 
   const handleChange = useCallback(
@@ -27,11 +27,13 @@ const SearchBox = ({ search }) => {
       handleChange={handleChange}
       handleClick={handleClick}
       handleKeyPress={handleKeyPress}
+      data={data}
     />
   );
 };
 SearchBox.propTypes = {
   search: PropTypes.func.isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default SearchBox;

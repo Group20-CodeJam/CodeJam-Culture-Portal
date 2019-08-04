@@ -32,10 +32,10 @@ export default {
     textAlign: 'center',
     border: '2px solid #744b67',
     borderRadius: '5px',
+    fontSize: '16px',
     '&:hover': {
       background: '#744b67',
       color: '#eeedff',
     },
   },
-
 };

@@ -1,0 +1,14 @@
+{
+  "ru": {
+    "placeholder": "Поиск",
+    "buttonName": "Поиск"
+  },
+  "by": {
+    "placeholder": "Пошук",
+    "buttonName": "Пошук"
+  },
+  "en": {
+    "placeholder": "Search",
+    "buttonName": "Search"
+  }
+}

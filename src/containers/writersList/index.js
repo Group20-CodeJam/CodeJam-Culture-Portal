@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from '@material-ui/core';
 import Card from '../../components/card';
-import info from './info';
 
 const NOT_FOUND_KEY = -1;
 const SM = 4;
 const SPACING = 2;
 
-const WritersList = ({ query }) => (
+const WritersList = ({ query, data: { info, linkPage, placeBirth } }) => (
   <Grid container justify="center" spacing={SPACING}>
     {
       info
@@ -18,7 +17,11 @@ const WritersList = ({ query }) => (
         })
         .map((field, i, arr) => (
           <Grid item sm={SM} key={i.toString() + 1}>
-            <Card info={arr[i]} />
+            <Card
+              info={arr[i]}
+              linkPage={linkPage}
+              placeBirth={placeBirth}
+            />
           </Grid>
         ))
     }
@@ -27,6 +30,7 @@ const WritersList = ({ query }) => (
 
 WritersList.propTypes = {
   query: PropTypes.string.isRequired,
+  data: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
 export default WritersList;
