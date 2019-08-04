@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from '@material-ui/styles';
 
-import styles from './styles';
+import styles from './style.css';
 
 const SearchElement = ({
   data: { placeholder, buttonName },

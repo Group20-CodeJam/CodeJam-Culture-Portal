@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { withStyles } from '@material-ui/styles';
-import styles from './styles';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -62,4 +60,4 @@ const IndexPage = () => {
   );
 };
 
-export default withStyles(styles)(IndexPage);
+export default IndexPage;
