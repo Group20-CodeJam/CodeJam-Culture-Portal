@@ -6,7 +6,7 @@ import Button from '@material-ui/core/Button';
 import Video from '../../components/video';
 import styles from './styles';
 
-const VideoContainer = ({ videoId, classes: { button, videoContainer } }) => {
+const VideoContainer = ({ videoButton, videoId, classes: { button, videoContainer } }) => {
   const [isOpen, setIsOpen] = useState('');
 
   const openModal = useCallback(
@@ -45,6 +45,7 @@ const VideoContainer = ({ videoId, classes: { button, videoContainer } }) => {
 VideoContainer.propTypes = {
   videoId: PropTypes.string.isRequired,
   classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  videoButton: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(VideoContainer);

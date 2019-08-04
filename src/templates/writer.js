@@ -6,11 +6,12 @@ import WriterContainer from '../containers/writerContainer';
 import Header from '../components/header';
 import Footer from '../components/footer';
 import dataHeaderInfo from '../../data/headerInfo';
+import dataVideoButton from '../../data/videoButton';
 
 const Writer = ({ data }) => {
   const {
     writerName, yearsWriter, image, biography,
-    listOfWorks, photoGallery, video, placeOfMajorActivity,
+    works, photoGallery, video, placeOfMajorActivity,
   } = data.contentfulWriter;
 
   let languageStorage = 'ru';
@@ -21,12 +22,14 @@ const Writer = ({ data }) => {
   }
 
   const [headerInfo, setHeaderInfo] = useState(dataHeaderInfo[languageStorage]);
+  const [videoButton, setVideoButton] = useState(dataVideoButton[languageStorage]);
   const [language, setLanguage] = useState(languageStorage);
 
   const сhangeLanguage = (languageValue) => {
     localStorage.setItem('lang', languageValue);
     setHeaderInfo(dataHeaderInfo[languageValue]);
     setLanguage(languageValue);
+    setVideoButton(dataVideoButton[languageValue]);
   };
 
   return (
@@ -45,10 +48,11 @@ const Writer = ({ data }) => {
         yearsOfLife={yearsWriter[language]}
         image={image}
         biography={biography[language]}
-        listOfWorks={listOfWorks}
+        listOfWorks={works[language]}
         photoGallery={photoGallery}
         video={video}
         placeOfMajorActivity={placeOfMajorActivity}
+        videoButton={videoButton}
       />
       <Footer />
     </div>
@@ -69,6 +73,9 @@ export const pageQuery = graphql`
         yearsOfLife
         authorsName
         writerName{
+          ru,by,en
+        }
+        works{
           ru,by,en
         }
         yearsWriter{
