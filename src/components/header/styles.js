@@ -22,7 +22,7 @@ export default {
     color: '#eeedff',
     outline: 'none',
     textDecoration: 'none',
-    marginRight: '30px',
+    marginRight: '7%',
     fontSize: '24px',
     '&:hover': {
       borderBottom: '1px solid #ffffff',
